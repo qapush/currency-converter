@@ -1,0 +1,12 @@
+.app {
+    padding: 1rem;
+}
+
+button, select {
+    margin: 1rem;
+}
+
+input {
+    display: block;
+    margin: 1rem;
+}
