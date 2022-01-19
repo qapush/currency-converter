@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
 import Select from "../Select/Select";
+import {BsArrowDownUp} from 'react-icons/bs'
+import './calculator.css';
 
 function Calculator({ date, rates, selected, swapSelected, changeSelected }) {
 
@@ -14,13 +16,14 @@ function Calculator({ date, rates, selected, swapSelected, changeSelected }) {
         }
     }, [selected, amount])
 
-    const dateOfRate = new Date(date).toLocaleDateString('pl-PL', {weekday: 'long', day: 'numeric', month: 'long'})
+    const dateOfRate = new Date(date).toLocaleDateString('pl-PL', {day: 'numeric', month: 'long'})
 
   return (
     <div className="calculator">
       
-      {date ? <h1>Kurs aktualny na {dateOfRate}</h1> : null}
+      {date ? <div className="row"><h2>Kurs aktualny na {dateOfRate}</h2></div> : null}
       
+      <div className="row row--first">
       <input 
         type="number" 
         onChange={ e => setAmount(e.target.value) }/>
@@ -30,22 +33,30 @@ function Calculator({ date, rates, selected, swapSelected, changeSelected }) {
         selected={selected[0]} 
         onChange={changeSelected}
         />
+      </div>
       
+      <div className="row">
       <div>
-        <button onClick={swapSelected}>reverse</button>
+        <button onClick={swapSelected}><BsArrowDownUp/></button>
+      </div>
       </div>
      
+      <div className="row">
       <Select 
         rates={rates} 
         selected={selected[1]} 
         onChange={changeSelected}
         />
-      
-      <div className="result">
-          <h3>
-              {result > 0 && amount ? result.toFixed(2) : null}
-          </h3>
       </div>
+      
+     <div className="row">
+      <div className="result">
+            <h3>
+                {result > 0 && amount ? <h3>{result.toFixed(2)}</h3> : null}
+            </h3>
+        </div>
+     </div>
+
 
     </div>
   );

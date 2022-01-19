@@ -1,0 +1,14 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body, #root {
+    height: 100%;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;600&family=Source+Sans+Pro:wght@300&display=swap');
+
+#root {
+    background-color: #FFD166;
+}

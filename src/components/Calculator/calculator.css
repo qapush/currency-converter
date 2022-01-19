@@ -1,0 +1,44 @@
+h2 {
+    font-family: 'Josefin Sans', sans-serif;
+    color: #073B4C;
+    max-width: 90%;
+    margin: 0 auto 2rem auto;
+}
+
+h3 {
+    font-family: 'Josefin Sans', sans-serif;
+    color: #073B4C;
+    max-width: 70%;
+    margin: 2rem auto auto;
+}
+
+button {
+    background-color: #06D6A0;
+    border: none;
+    padding: 0.7rem 0.85rem 0.6rem 0.85rem;
+    border-radius: 0.5rem;
+    color: white;
+    font-size: 1.2rem;
+    transition: box-shadow 0.2s ease-out;
+}
+
+    button:hover {
+        cursor: pointer;
+        box-shadow: 0 0 10px #06D6A0;
+}
+
+input {
+    padding: 0.5rem;
+    border-radius: 0.2rem 0 0 0.2rem;
+    border: none;
+}
+
+input:focus   {
+    border: none;
+    outline: none;
+}
+
+.result {
+    min-height: 2rem;
+}
+

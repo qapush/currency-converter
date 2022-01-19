@@ -1,3 +1,5 @@
+import './select.css';
+
 export default function Select({rates, selected, onChange}) {
     
     const options = Object.keys(rates).map((item, index) => {
